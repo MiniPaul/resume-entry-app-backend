@@ -13,7 +13,7 @@ app.use(cors())
 app.use("/api/user",userRouter)
 app.use("/api/resume",resumeRouter)
 
-mongoose.connect("mongodb+srv://minipaul:minipaul@cluster0.isuura7.mongodb.net/userblogDb?retryWrites=true&w=majority",
+mongoose.connect("mongodb+srv://minipaul:minipaul@cluster0.isuura7.mongodb.net/resumeDb?retryWrites=true&w=majority",
 {useNewUrlParser:true})
 
 app.listen(3001,()=>{
