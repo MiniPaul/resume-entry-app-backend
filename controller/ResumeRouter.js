@@ -11,8 +11,8 @@ router.post("/add",async(req,res)=>{
     })
 })
 router.get("/viewall",async(req,res)=>{
-    let result=await postmodel.find()
-    .populate("userId","name age mobno address pincode email -_id ")//id and password not needed
+    let result=await resumemodel.find()
+    .populate("userId","profile skill qualification certification project workexperience language createdDate -_id ")
     .exec()
     res.json(result)
 })
